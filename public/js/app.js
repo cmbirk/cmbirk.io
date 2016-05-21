@@ -14802,7 +14802,7 @@ router.redirect({
 
 router.start(_App2.default, '#app');
 
-},{"./components/App.vue":31,"./views/HomeView.vue":32,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],31:[function(require,module,exports){
+},{"./components/App.vue":31,"./views/HomeView.vue":33,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14811,13 +14811,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var _app = require('../app');
 
+var _NavMenu = require('./NavMenu.vue');
+
+var _NavMenu2 = _interopRequireDefault(_NavMenu);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 exports.default = {
   data: function data() {
     return {};
-  }
+  },
+
+  components: { NavMenu: _NavMenu2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"container-fluid\">\n  <router-view></router-view>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"container-fluid\">\n  <nav-menu></nav-menu>\n  <router-view></router-view>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -14829,7 +14837,29 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../app":30,"vue":29,"vue-hot-reload-api":3}],32:[function(require,module,exports){
+},{"../app":30,"./NavMenu.vue":32,"vue":29,"vue-hot-reload-api":3}],32:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  replace: false
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<nav>\n  <i class=\"fa fa-bars\"></i>\n</nav>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/Users/cmbirk/Sites/cmbirk.io/resources/assets/js/components/NavMenu.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+  }
+})()}
+},{"vue":29,"vue-hot-reload-api":3}],33:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14837,7 +14867,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {};
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view row\">\n  <div class=\"col-md-12 col-sm-12\">\n    <h1>Hi, I'm Chris</h1>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view row\">\n  <header class=\"home-header\">\n    <h1>Hi, I'm Chris</h1>\n  </header>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

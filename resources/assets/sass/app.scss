@@ -1,5 +1,6 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "mixins/font-face";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "modules/nav-menu";
 @import "views/home-view";
 
 @font-face {

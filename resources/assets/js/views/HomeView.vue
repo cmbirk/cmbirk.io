@@ -1,8 +1,8 @@
 <template>
   <div class="home-view row">
-    <div class="col-md-12 col-sm-12">
+    <header class="home-header">
       <h1>Hi, I'm Chris</h1>
-    </div>
+    </header>
   </div>
 </template>
 <script>

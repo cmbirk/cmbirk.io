@@ -15,9 +15,13 @@ require('laravel-elixir-vueify');
  */
 
 elixir(function(mix) {
-  mix.copy(elixir.config.assetsPath + '/fonts/WireOne.ttf', elixir.config.publicPath + '/fonts/');
+  mix;
 
-  mix.browserify('app.js')
+  mix.copy(elixir.config.assetsPath + '/fonts/WireOne.ttf', elixir.config.publicPath + '/fonts/')
+  .copy('node_modules/font-awesome/fonts/fontawesome-webfont.woff2', elixir.config.publicPath + '/fonts/')
+  .copy('node_modules/font-awesome/fonts/fontawesome-webfont.woff', elixir.config.publicPath + '/fonts/')
+  .copy('node_modules/font-awesome/fonts/fontawesome-webfont.ttf', elixir.config.publicPath + '/fonts/')
+  .browserify('app.js')
   .sass('app.scss')
   .imagemin()
   .browserSync({
