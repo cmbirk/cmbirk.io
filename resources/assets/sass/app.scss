@@ -1,2 +1,14 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "views/home-view";
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.app-wrapper {
+  height: 100%;
+}

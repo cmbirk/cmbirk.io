@@ -5733,4 +5733,19 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.home-view {
+  height: 100%;
+  position: relative; }
+  .home-view .home-bg {
+    position: absolute; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%; }
+
+.app-wrapper {
+  height: 100%; }
+
 /*# sourceMappingURL=app.css.map */
