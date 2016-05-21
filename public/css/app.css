@@ -7966,6 +7966,14 @@ nav.active ul {
   display: block;
   max-height: 999px; }
 
+@media (max-width: 768px) {
+  nav {
+    left: 5px;
+    top: 5px; }
+  nav ul {
+    background: rgba(209, 209, 209, 0.7);
+    padding-right: 10px; } }
+
 .home-view {
   height: 100%;
   position: relative; }

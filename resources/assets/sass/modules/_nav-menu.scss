@@ -30,3 +30,15 @@ nav.active ul {
   display:block;
   max-height:999px;
 }
+
+@media (max-width: $screen-sm) {
+  nav {
+    left: 5px;
+    top:5px;
+  }
+
+  nav ul {
+    background: rgba(209, 209, 209, .7);
+    padding-right:10px;
+  }
+}
