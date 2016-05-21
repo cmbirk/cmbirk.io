@@ -24,7 +24,7 @@
       }
     },
     ready () {
-      setInterval(this.changeRole, 5000);
+      setInterval(this.changeRole, 4000);
     },
     methods: {
       changeRole () {
