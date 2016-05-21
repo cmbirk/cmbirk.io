@@ -1,5 +1,12 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "mixins/font-face";
 @import "views/home-view";
+
+@font-face {
+  font-family: "Wire One";
+  src: url("../fonts/WireOne.ttf") format("truetype")
+}
+
 
 html {
   height: 100%;
@@ -11,4 +18,5 @@ body {
 
 .app-wrapper {
   height: 100%;
+  font-family: 'Wire One', sans-serif;
 }

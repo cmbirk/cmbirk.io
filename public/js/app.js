@@ -14837,7 +14837,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {};
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view row\">\n  <img src=\"/img/chicago-clouds.jpg\" class=\"img-responsive home-bg\" alt=\"Chicago Clouds\">\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view row\">\n  <div class=\"col-md-12 col-sm-12\">\n    <h1>Hi, I'm Chris</h1>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

@@ -1,6 +1,8 @@
 <template>
   <div class="home-view row">
-    <img src="/img/chicago-clouds.jpg" class="img-responsive home-bg" alt="Chicago Clouds">
+    <div class="col-md-12 col-sm-12">
+      <h1>Hi, I'm Chris</h1>
+    </div>
   </div>
 </template>
 <script>

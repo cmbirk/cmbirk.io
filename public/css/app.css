@@ -5735,9 +5735,13 @@ button.close {
 
 .home-view {
   height: 100%;
-  position: relative; }
-  .home-view .home-bg {
-    position: absolute; }
+  position: relative;
+  background: url(../img/chicago-clouds.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+@font-face {
+  font-family: "Wire One";
+  src: url("../fonts/WireOne.ttf") format("truetype"); }
 
 html {
   height: 100%; }
@@ -5746,6 +5750,7 @@ body {
   height: 100%; }
 
 .app-wrapper {
-  height: 100%; }
+  height: 100%;
+  font-family: 'Wire One', sans-serif; }
 
 /*# sourceMappingURL=app.css.map */

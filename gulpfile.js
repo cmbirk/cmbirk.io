@@ -15,10 +15,12 @@ require('laravel-elixir-vueify');
  */
 
 elixir(function(mix) {
-    mix.browserify('app.js')
-    .sass('app.scss')
-    .imagemin()
-    .browserSync({
-      proxy: "http://local.cmbirk.io"
-    });
+  mix.copy(elixir.config.assetsPath + '/fonts/WireOne.ttf', elixir.config.publicPath + '/fonts/');
+
+  mix.browserify('app.js')
+  .sass('app.scss')
+  .imagemin()
+  .browserSync({
+    proxy: "http://local.cmbirk.io"
+  });
 });
