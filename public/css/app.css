@@ -7930,6 +7930,8 @@ h1 {
 .view-header {
   text-align: center;
   font-size: 3em; }
+  .view-header h1 {
+    font-size: 2em; }
 
 .fade-transition {
   opacity: 1;
@@ -7980,8 +7982,6 @@ nav.active ul {
 
 .home-header {
   padding-top: 10%; }
-  .home-header h1 {
-    font-size: 2em; }
 
 .home-content {
   text-align: center; }
