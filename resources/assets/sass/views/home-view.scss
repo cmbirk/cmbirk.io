@@ -1,7 +1,7 @@
 .home-view {
   height: 100%;
   position:relative;
-
+  @extend .row;
 
   &:before {
     content: ' ';
@@ -22,10 +22,22 @@
   @extend .col-sm-12;
 
   text-align:center;
-  margin-top:10%;
+  padding-top:10%;
   font-size:3em;
 
   h1 {
     font-size:2em;
+  }
+}
+
+.home-content {
+  @extend .container;
+  @extend .col-md-12;
+  @extend .col-sm-12;
+
+  text-align: center;
+
+  .current-role {
+    border-bottom: 1px dotted black;
   }
 }

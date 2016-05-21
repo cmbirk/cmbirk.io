@@ -14871,14 +14871,35 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":29,"vue-hot-reload-api":3}],33:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = {};
+exports.default = {
+  data: function data() {
+    return {
+      displayRole: '',
+      roles: ['developer', 'guitarist', 'basketball player', 'golfer', 'craft beer enthusiast'],
+      currentRole: 0
+    };
+  },
+  ready: function ready() {
+    setInterval(this.changeRole, 5000);
+  },
+
+  methods: {
+    changeRole: function changeRole() {
+      if (this.currentRole != this.roles.length - 1) {
+        this.currentRole++;
+      } else {
+        this.currentRole = 0;
+      }
+    }
+  }
+};
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view row\">\n  <header class=\"home-header\">\n    <h1>Hi, I'm Chris</h1>\n  </header>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view\">\n  <header class=\"home-header\">\n    <h1>Hi, I'm Chris</h1>\n  </header>\n  <div class=\"home-content\">\n    <p>Hi, my name is Chris Birk and I am a <span class=\"current-role\">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

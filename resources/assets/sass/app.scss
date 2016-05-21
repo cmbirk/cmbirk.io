@@ -1,23 +1,6 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "settings/fonts";
+@import "settings/global";
 @import "modules/nav-menu";
 @import "views/home-view";
-
-@font-face {
-  font-family: "Wire One";
-  src: url("../fonts/WireOne.ttf") format("truetype")
-}
-
-
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-}
-
-.app-wrapper {
-  height: 100%;
-  font-family: 'Wire One', sans-serif;
-}
