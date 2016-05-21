@@ -15,4 +15,17 @@ nav {
       background:lightgray;
     }
   }
+
+  ul {
+    padding-left:5px;
+    list-style: none;
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height .5s;
+  }
+}
+
+nav.active ul {
+  display:block;
+  max-height:999px;
 }
