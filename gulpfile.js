@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-imagemin');
 require('laravel-elixir-vueify');
 
 /*
@@ -16,5 +17,8 @@ require('laravel-elixir-vueify');
 elixir(function(mix) {
     mix.browserify('app.js')
     .sass('app.scss')
-    .browserSync();
+    .imagemin()
+    .browserSync({
+      proxy: "http://local.cmbirk.io"
+    });
 });
