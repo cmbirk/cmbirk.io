@@ -16,7 +16,8 @@
   Vue.use(VueRouter);
 
   import App from './components/App.vue';
-  import AboutView from './views/AboutView.vue';
+  //import AboutView from './views/AboutView.vue';
+  import ResumeView from './views/ResumeView.vue';
   import HomeView from './views/HomeView.vue';
 
   Vue.config.debug = true;
@@ -33,8 +34,8 @@
     '/': {
       component: HomeView
     },
-    'about': {
-      component: AboutView
+    'resume': {
+      component: ResumeView
     }
   });
 

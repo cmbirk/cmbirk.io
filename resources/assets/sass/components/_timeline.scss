@@ -1,0 +1,36 @@
+.timeline {
+  list-style: none;
+
+  .timeline-event-year {
+    float: left;
+    padding: 10px;
+    font-weight:700;
+    display:inline-block;
+    width: 10%;
+  }
+
+  .timeline-event-body {
+    display: inline-block;
+    background:#ddd;
+    margin-bottom:10px;
+    position:relative;
+    padding: 10px 10px 0 10px;
+    border-bottom: 1px solid #ccc;
+    width:85%;
+    border-radius:5px;
+
+    &:after {
+      content: ' ';
+      position:absolute;
+      top:15px;
+      right: 0;
+      left: -16px;
+      height: 0;
+      width: 0;
+      border: solid transparent;
+      border-right-color: #ddd;
+      border-width:8px;
+
+    }
+  }
+}

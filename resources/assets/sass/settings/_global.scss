@@ -42,4 +42,12 @@ h1 {
 
 .view-content {
   @extend .container;
+  .white-bg {
+    @extend .row;
+
+    background: rgba(256, 256, 256, .2);
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #fafafa;
+  }
 }

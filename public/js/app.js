@@ -14766,9 +14766,9 @@ var _App = require('./components/App.vue');
 
 var _App2 = _interopRequireDefault(_App);
 
-var _AboutView = require('./views/AboutView.vue');
+var _ResumeView = require('./views/ResumeView.vue');
 
-var _AboutView2 = _interopRequireDefault(_AboutView);
+var _ResumeView2 = _interopRequireDefault(_ResumeView);
 
 var _HomeView = require('./views/HomeView.vue');
 
@@ -14787,6 +14787,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_vueAsyncData2.default);
 _vue2.default.use(_vueResource2.default);
 _vue2.default.use(_vueRouter2.default);
+//import AboutView from './views/AboutView.vue';
+
 
 _vue2.default.config.debug = true;
 
@@ -14802,8 +14804,8 @@ router.map({
   '/': {
     component: _HomeView2.default
   },
-  'about': {
-    component: _AboutView2.default
+  'resume': {
+    component: _ResumeView2.default
   }
 });
 
@@ -14813,7 +14815,7 @@ router.redirect({
 
 router.start(_App2.default, '#app');
 
-},{"./components/App.vue":31,"./views/AboutView.vue":33,"./views/HomeView.vue":34,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],31:[function(require,module,exports){
+},{"./components/App.vue":31,"./views/HomeView.vue":35,"./views/ResumeView.vue":36,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14882,26 +14884,66 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":29,"vue-hot-reload-api":3}],33:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = {};
+
+var _TimelineEvent = require('./TimelineEvent.vue');
+
+var _TimelineEvent2 = _interopRequireDefault(_TimelineEvent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  props: ['timeline'],
+  components: { TimelineEvent: _TimelineEvent2.default }
+};
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"about-view\">\n  <header class=\"view-header\">\n    <h1>About Me</h1>\n  </header>\n  <div class=\"view-content\">\n    <p>This is my about page</p>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<ul class=\"timeline\">\n  <timeline-event v-for=\"event in timeline\" :title=\"event.title\" :description=\"event.description\" :date=\"event.date\"></timeline-event>\n</ul>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/cmbirk/Sites/cmbirk.io/resources/assets/js/views/AboutView.vue"
+  var id = "/Users/cmbirk/Sites/cmbirk.io/resources/assets/js/components/Timeline.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":3}],34:[function(require,module,exports){
+},{"./TimelineEvent.vue":34,"vue":29,"vue-hot-reload-api":3}],34:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: {
+    title: String,
+    description: String,
+    date: {
+      coerce: function coerce(val) {
+        return val.getFullYear();
+      }
+    }
+  }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<li class=\"timeline-event\">\n  <div class=\"timeline-event-year\">{{ date }}</div>\n  <div class=\"timeline-event-body\">\n    <h3>{{ title }}</h3>\n    <p>{{ description }}</p>\n  </div>\n</li>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/Users/cmbirk/Sites/cmbirk.io/resources/assets/js/components/TimelineEvent.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+  }
+})()}
+},{"vue":29,"vue-hot-reload-api":3}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14942,6 +14984,58 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":3}]},{},[30]);
+},{"vue":29,"vue-hot-reload-api":3}],36:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Timeline = require('../components/Timeline.vue');
+
+var _Timeline2 = _interopRequireDefault(_Timeline);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  data: function data() {
+    return {
+      education_timeline: [{
+        title: 'I was born in Indianapolis',
+        description: 'My birthday is December 30, 1987',
+        date: new Date(1987, 11, 30)
+      }, {
+        title: 'Graduated from Cathedral High School',
+        description: 'in Indianapolis, IN',
+        date: new Date(2006, 4)
+      }, {
+        title: 'Graduated from Purdue University',
+        description: 'with a BS in Computer Science',
+        date: new Date(2010, 11)
+      }],
+      experience_timeline: [{
+        title: 'Developer at OneAmerica',
+        description: "Developed internal systems and tools for OneAmerica, a mutual insurance holding company",
+        date: new Date(2011, 0)
+      }]
+    };
+  },
+
+  components: { Timeline: _Timeline2.default }
+};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-timeline\">\n          <h3>Education</h3>\n          <timeline :timeline=\"education_timeline\"></timeline>\n          <h3>Experience</h3>\n          <timeline :timeline=\"experience_timeline\"></timeline>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/Users/cmbirk/Sites/cmbirk.io/resources/assets/js/views/ResumeView.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+  }
+})()}
+},{"../components/Timeline.vue":33,"vue":29,"vue-hot-reload-api":3}]},{},[30]);
 
 //# sourceMappingURL=app.js.map
