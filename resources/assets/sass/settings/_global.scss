@@ -14,3 +14,28 @@ body {
 h1 {
   font-family: 'Wire One', sans-serif;
 }
+
+.chicago-bg {
+  &:before {
+    content: ' ';
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    opacity:.6;
+    background: url(../img/chicago-clouds.jpg) no-repeat center center fixed;
+    background-size: cover;
+    z-index:-1;
+  }
+}
+
+.view-header {
+  text-align:center;
+  font-size:3em;
+}
+
+.view-content {
+  @extend .container;
+}

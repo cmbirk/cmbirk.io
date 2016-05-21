@@ -14766,6 +14766,10 @@ var _App = require('./components/App.vue');
 
 var _App2 = _interopRequireDefault(_App);
 
+var _AboutView = require('./views/AboutView.vue');
+
+var _AboutView2 = _interopRequireDefault(_AboutView);
+
 var _HomeView = require('./views/HomeView.vue');
 
 var _HomeView2 = _interopRequireDefault(_HomeView);
@@ -14786,6 +14790,10 @@ _vue2.default.use(_vueRouter2.default);
 
 _vue2.default.config.debug = true;
 
+_vue2.default.transition('fade', {
+  type: 'transition'
+});
+
 var router = exports.router = new _vueRouter2.default({
   history: true
 });
@@ -14793,6 +14801,9 @@ var router = exports.router = new _vueRouter2.default({
 router.map({
   '/': {
     component: _HomeView2.default
+  },
+  'about': {
+    component: _AboutView2.default
   }
 });
 
@@ -14802,7 +14813,7 @@ router.redirect({
 
 router.start(_App2.default, '#app');
 
-},{"./components/App.vue":31,"./views/HomeView.vue":33,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],31:[function(require,module,exports){
+},{"./components/App.vue":31,"./views/AboutView.vue":33,"./views/HomeView.vue":34,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14825,7 +14836,7 @@ exports.default = {
   components: { NavMenu: _NavMenu2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"container-fluid\">\n  <nav-menu></nav-menu>\n  <router-view></router-view>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"container-fluid chicago-bg\">\n  <nav-menu></nav-menu>\n  <router-view transition=\"fade\" transition-mode=\"out-in\"></router-view>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -14871,6 +14882,26 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"vue":29,"vue-hot-reload-api":3}],33:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {};
+if (module.exports.__esModule) module.exports = module.exports.default
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"about-view\">\n  <header class=\"view-header\">\n    <h1>About Me</h1>\n  </header>\n  <div class=\"view-content\">\n    <p>This is my about page</p>\n  </div>\n</div>\n"
+if (module.hot) {(function () {  module.hot.accept()
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  var id = "/Users/cmbirk/Sites/cmbirk.io/resources/assets/js/views/AboutView.vue"
+  if (!module.hot.data) {
+    hotAPI.createRecord(id, module.exports)
+  } else {
+    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+  }
+})()}
+},{"vue":29,"vue-hot-reload-api":3}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14899,7 +14930,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view\">\n  <header class=\"home-header\">\n    <h1>Hi, I'm Chris</h1>\n  </header>\n  <div class=\"home-content\">\n    <p>Hi, my name is Chris Birk and I am a <span class=\"current-role\">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view\">\n  <header class=\"home-header view-header\">\n    <h1>Hi, I'm Chris</h1>\n  </header>\n  <div class=\"home-content view-content\">\n    <p>Hi, my name is Chris Birk and I am a <span class=\"current-role\">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

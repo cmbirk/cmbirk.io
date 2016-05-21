@@ -1,9 +1,9 @@
 <template>
   <div class="home-view">
-    <header class="home-header">
+    <header class="home-header view-header">
       <h1>Hi, I'm Chris</h1>
     </header>
-    <div class="home-content">
+    <div class="home-content view-content">
       <p>Hi, my name is Chris Birk and I am a <span class="current-role">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>
     </div>
   </div>

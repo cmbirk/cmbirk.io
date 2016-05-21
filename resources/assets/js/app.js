@@ -16,9 +16,14 @@
   Vue.use(VueRouter);
 
   import App from './components/App.vue';
+  import AboutView from './views/AboutView.vue';
   import HomeView from './views/HomeView.vue';
 
   Vue.config.debug = true;
+
+  Vue.transition('fade', {
+    type: 'transition',
+  });
 
   export var router = new VueRouter({
     history: true
@@ -27,6 +32,9 @@
   router.map({
     '/': {
       component: HomeView
+    },
+    'about': {
+      component: AboutView
     }
   });
 

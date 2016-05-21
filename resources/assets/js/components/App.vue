@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid chicago-bg">
     <nav-menu></nav-menu>
-    <router-view></router-view>
+    <router-view transition="fade" transition-mode="out-in"></router-view>
   </div>
 </template>
 
