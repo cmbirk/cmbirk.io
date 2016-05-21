@@ -4,7 +4,7 @@
       <h1>Hi, I'm Chris</h1>
     </header>
     <div class="home-content view-content">
-      <p>Hi, my name is Chris Birk and I am a <span class="current-role">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>
+      <p>My name is Chris Birk and I am a <span class="current-role">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>
     </div>
   </div>
 </template>
