@@ -7988,7 +7988,8 @@ nav.active ul {
     border-bottom: 1px solid #7ea3ca;
     border-radius: 5px; }
     .timeline .timeline-event-body h3 {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      margin-top: 0; }
     .timeline .timeline-event-body:after {
       content: ' ';
       position: absolute;
