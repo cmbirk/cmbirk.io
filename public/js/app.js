@@ -14901,7 +14901,7 @@ exports.default = {
   components: { TimelineEvent: _TimelineEvent2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<ul class=\"timeline\">\n  <timeline-event v-for=\"event in timeline\" :title=\"event.title\" :description=\"event.description\" :date=\"event.date\"></timeline-event>\n</ul>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<ul class=\"timeline\">\n  <timeline-event v-for=\"event in timeline | orderBy 'date' -1\" :title=\"event.title\" :description=\"event.description\" :date=\"event.date\"></timeline-event>\n</ul>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -15044,7 +15044,7 @@ exports.default = {
   components: { Timeline: _Timeline2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-body\">\n          <div class=\"resume-timeline\">\n            <div class=\"resume-timeline-education\">\n              <h3 class=\"bold\">Education</h3>\n              <timeline :timeline=\"education_timeline\"></timeline>\n            </div>\n            <div class=\"resume-timeline-experience\">\n              <h3 class=\"bold\">Experience</h3>\n              <timeline :timeline=\"experience_timeline\"></timeline>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-body\">\n          <div class=\"resume-timeline\">\n            <div class=\"resume-timeline-experience\">\n              <h3 class=\"bold\">Experience</h3>\n              <timeline :timeline=\"experience_timeline\"></timeline>\n            </div>\n            <div class=\"resume-timeline-education\">\n              <h3 class=\"bold\">Education</h3>\n              <timeline :timeline=\"education_timeline\"></timeline>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
