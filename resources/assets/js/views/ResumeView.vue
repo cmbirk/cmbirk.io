@@ -76,7 +76,7 @@ export default {
           date: new Date(2013, 0)
         },
         {
-          title: 'Owner / CEO',
+          title: 'Owner / CEO at Divide By Zero LLC',
           description: 'Started LLC to help support a growing civic technology community',
           date: new Date(2016, 2)
         }
