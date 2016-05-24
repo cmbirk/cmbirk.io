@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid chicago-bg">
+  <div class="container-fluid">
     <nav-menu></nav-menu>
     <router-view transition="fade" transition-mode="out-in"></router-view>
   </div>

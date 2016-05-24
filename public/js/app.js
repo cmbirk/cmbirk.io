@@ -14838,7 +14838,7 @@ exports.default = {
   components: { NavMenu: _NavMenu2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"container-fluid chicago-bg\">\n  <nav-menu></nav-menu>\n  <router-view transition=\"fade\" transition-mode=\"out-in\"></router-view>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"container-fluid\">\n  <nav-menu></nav-menu>\n  <router-view transition=\"fade\" transition-mode=\"out-in\"></router-view>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
