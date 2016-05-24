@@ -17,4 +17,21 @@
   .current-role {
     border-bottom: 1px dotted black;
   }
+
+  .social-icons {
+    a {
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+      &:last-child {
+        i {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }

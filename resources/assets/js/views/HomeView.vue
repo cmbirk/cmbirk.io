@@ -5,6 +5,17 @@
     </header>
     <div class="home-content view-content">
       <p>My name is Chris Birk and I am a <span class="current-role">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>
+      <div class="social-icons">
+        <a href="https://twitter.com/cmbirk" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/cmbirk" target="_blank">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://www.github.com/cmbirk" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
     </div>
   </div>
 </template>
