@@ -12,11 +12,11 @@
           <div class="resume-body">
             <div class="resume-timeline">
               <div class="resume-timeline-education">
-                <h3>Education</h3>
+                <h3 class="bold">Education</h3>
                 <timeline :timeline="education_timeline"></timeline>
               </div>
               <div class="resume-timeline-experience">
-                <h3>Experience</h3>
+                <h3 class="bold">Experience</h3>
                 <timeline :timeline="experience_timeline"></timeline>
               </div>
             </div>

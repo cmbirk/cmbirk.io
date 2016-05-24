@@ -7916,6 +7916,9 @@ body {
 h1 {
   font-family: 'Wire One', sans-serif; }
 
+.bold {
+  font-weight: 700; }
+
 .view-header {
   text-align: center;
   font-size: 3em; }
@@ -7983,6 +7986,8 @@ nav.active ul {
     padding: 10px 10px 0 10px;
     border-bottom: 1px solid #7ea3ca;
     border-radius: 5px; }
+    .timeline .timeline-event-body h3 {
+      margin-bottom: 0; }
     .timeline .timeline-event-body:after {
       content: ' ';
       position: absolute;
