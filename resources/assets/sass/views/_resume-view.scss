@@ -1,3 +1,42 @@
-.resume-intro {
-  text-align: center;
+.resume {
+  @extend .col-md-12;
+  @extend .col-sm-12;
+
+  .resume-intro {
+    @extend .row;
+    text-align: center;
+  }
+
+  .resume-body {
+    @extend .row;
+
+    .resume-timeline {
+      @extend .col-md-6;
+      @extend .col-sm-6;
+      @extend .col-xs-12;
+    }
+
+    .resume-timeline-education, .resume-timeline-experience {
+      @extend .row;
+    }
+
+    .timeline {
+      @extend .col-md-12;
+
+      .timeline-event {
+        @extend .row;
+
+        .timeline-event-year {
+          @extend .col-md-2;
+        }
+
+        .timeline-event-body {
+          @extend .col-md-9;
+          @extend .col-md-offset-1;
+        }
+      }
+    }
+  }
 }
+
+

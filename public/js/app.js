@@ -15017,6 +15017,26 @@ exports.default = {
         title: 'Developer at OneAmerica',
         description: "Developed internal systems and tools for OneAmerica, a mutual insurance holding company",
         date: new Date(2011, 0)
+      }, {
+        title: 'CTO / Lead Developer at WiseCampus.com',
+        description: "Developed system for students to share class notes and get rewarded with gift cards",
+        date: new Date(2011, 3)
+      }, {
+        title: 'Director of DC Operations at inSourceCode LLC',
+        description: "Managed all DC-area clients and development for inSourceCode.  This included custom applications in PHP and Javascript as well as extensive Wordpress development",
+        date: new Date(2011, 11)
+      }, {
+        title: 'Lead Developer at OpenGov Foundation',
+        description: "As first employee and lead developer, created and managed many OSS projects in various languages and technologies.  Some, but not all, include custom PHP, Laravel, AngularJS, NodeJS, Wordpress, Jekyll, and Python",
+        date: new Date(2013, 0)
+      }, {
+        title: 'Member Board of Directors at OpenGov Foundation',
+        description: "Served as one of the original members of the Board of Directors for the OpenGov Foundation",
+        date: new Date(2013, 0)
+      }, {
+        title: 'Owner / CEO',
+        description: 'Started LLC to help support a growing civic technology community',
+        date: new Date(2016, 2)
       }]
     };
   },
@@ -15024,7 +15044,7 @@ exports.default = {
   components: { Timeline: _Timeline2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-timeline\">\n          <h3>Education</h3>\n          <timeline :timeline=\"education_timeline\"></timeline>\n          <h3>Experience</h3>\n          <timeline :timeline=\"experience_timeline\"></timeline>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-body\">\n          <div class=\"resume-timeline\">\n            <div class=\"resume-timeline-education\">\n              <h3>Education</h3>\n              <timeline :timeline=\"education_timeline\"></timeline>\n            </div>\n            <div class=\"resume-timeline-experience\">\n              <h3>Experience</h3>\n              <timeline :timeline=\"experience_timeline\"></timeline>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

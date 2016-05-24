@@ -9,11 +9,17 @@
           <div class="resume-intro">
             <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>
           </div>
-          <div class="resume-timeline">
-            <h3>Education</h3>
-            <timeline :timeline="education_timeline"></timeline>
-            <h3>Experience</h3>
-            <timeline :timeline="experience_timeline"></timeline>
+          <div class="resume-body">
+            <div class="resume-timeline">
+              <div class="resume-timeline-education">
+                <h3>Education</h3>
+                <timeline :timeline="education_timeline"></timeline>
+              </div>
+              <div class="resume-timeline-experience">
+                <h3>Experience</h3>
+                <timeline :timeline="experience_timeline"></timeline>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -48,6 +54,31 @@ export default {
           title: 'Developer at OneAmerica',
           description: "Developed internal systems and tools for OneAmerica, a mutual insurance holding company",
           date: new Date(2011, 0)
+        },
+        {
+          title: 'CTO / Lead Developer at WiseCampus.com',
+          description: "Developed system for students to share class notes and get rewarded with gift cards",
+          date: new Date(2011, 3)
+        },
+        {
+          title: 'Director of DC Operations at inSourceCode LLC',
+          description: "Managed all DC-area clients and development for inSourceCode.  This included custom applications in PHP and Javascript as well as extensive Wordpress development",
+          date: new Date(2011, 11)
+        },
+        {
+          title: 'Lead Developer at OpenGov Foundation',
+          description: "As first employee and lead developer, created and managed many OSS projects in various languages and technologies.  Some, but not all, include custom PHP, Laravel, AngularJS, NodeJS, Wordpress, Jekyll, and Python",
+          date: new Date(2013, 0)
+        },
+        {
+          title: 'Member Board of Directors at OpenGov Foundation',
+          description: "Served as one of the original members of the Board of Directors for the OpenGov Foundation",
+          date: new Date(2013, 0)
+        },
+        {
+          title: 'Owner / CEO',
+          description: 'Started LLC to help support a growing civic technology community',
+          date: new Date(2016, 2)
         }
       ]
     }
