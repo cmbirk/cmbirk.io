@@ -25,11 +25,15 @@
       return {
         displayRole: '',
         roles: [
-          'developer',
+          'software developer',
+          'entrepreneur',
           'guitarist',
+          'weight lifter',
           'basketball player',
           'golfer',
-          'craft beer enthusiast'
+          'craft beer drinker',
+          'whiskey connoisseur',
+          'volleyball player'
         ],
         currentRole: 0
       }

@@ -14953,7 +14953,7 @@ exports.default = {
   data: function data() {
     return {
       displayRole: '',
-      roles: ['developer', 'guitarist', 'basketball player', 'golfer', 'craft beer enthusiast'],
+      roles: ['software developer', 'entrepreneur', 'guitarist', 'weight lifter', 'basketball player', 'golfer', 'craft beer drinker', 'whiskey connoisseur', 'volleyball player'],
       currentRole: 0
     };
   },
