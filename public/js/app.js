@@ -15000,6 +15000,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   data: function data() {
     return {
+      skills: [{
+        name: 'Javascript',
+        rating: 9
+      }, {
+        name: 'PHP',
+        rating: 9
+      }, {
+        name: 'NodeJS',
+        rating: 8
+      }, {
+        name: 'Python',
+        rating: 5
+      }, {
+        name: 'Ruby',
+        rating: 4
+      }, {
+        name: 'CSS',
+        rating: 10
+      }, {
+        name: 'HTML',
+        rating: 10
+      }, {
+        name: 'Laravel',
+        rating: 8
+      }, {
+        name: 'Wordpress',
+        rating: 8
+      }, {
+        name: 'Jekyll',
+        rating: 7
+      }, {
+        name: 'AngularJS',
+        rating: 8
+      }, {
+        name: 'VueJS',
+        rating: 7
+      }, {
+        name: 'Apache',
+        rating: 7
+      }, {
+        name: 'Nginx',
+        rating: 6
+      }, {
+        name: 'Gulp / Grunt',
+        rating: 8
+      }],
       education_timeline: [{
         title: 'I was born in Indianapolis',
         description: 'My birthday is December 30, 1987',
@@ -15044,7 +15090,7 @@ exports.default = {
   components: { Timeline: _Timeline2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-body\">\n          <div class=\"resume-timeline\">\n            <div class=\"resume-timeline-experience\">\n              <h3 class=\"bold\">Experience</h3>\n              <timeline :timeline=\"experience_timeline\"></timeline>\n            </div>\n            <div class=\"resume-timeline-education\">\n              <h3 class=\"bold\">Education</h3>\n              <timeline :timeline=\"education_timeline\"></timeline>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-body\">\n          <div class=\"resume-timeline\">\n            <div class=\"resume-timeline-experience\">\n              <h3 class=\"bold\">Experience</h3>\n              <timeline :timeline=\"experience_timeline\"></timeline>\n            </div>\n            <div class=\"resume-timeline-education\">\n              <h3 class=\"bold\">Education</h3>\n              <timeline :timeline=\"education_timeline\"></timeline>\n            </div>\n          </div>\n          <div class=\"resume-skills\">\n            <h3 class=\"bold\">Skills</h3>\n            <div class=\"skill-levels\">\n              <ul class=\"level-measurements\">\n                <li v-for=\"n in 11\">{{ n }}</li>\n              </ul>\n            </div>\n            <div class=\"skills\">\n              <ul>\n                <li v-for=\"skill in skills | orderBy 'rating' 'name' -1\" class=\"skill-rating rating-{{ skill.rating }}\">\n                  <span class=\"skill-name\">{{ skill.name }}</span>\n                  <span class=\"skill-rating-number\">{{ skill.rating }}</span>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

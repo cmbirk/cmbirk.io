@@ -7,7 +7,7 @@
       <div class="white-bg">
         <div class="resume">
           <div class="resume-intro">
-            <p>I am a full stack developer.  I'm driven to use technology to solve real world problems helping real people.</p>
+            <p>I am a full stack developer.  I use technology to solve real world problems helping real people.</p>
           </div>
           <div class="resume-body">
             <div class="resume-timeline">
@@ -18,6 +18,22 @@
               <div class="resume-timeline-education">
                 <h3 class="bold">Education</h3>
                 <timeline :timeline="education_timeline"></timeline>
+              </div>
+            </div>
+            <div class="resume-skills">
+              <h3 class="bold">Skills</h3>
+              <div class="skill-levels">
+                <ul class="level-measurements">
+                  <li v-for="n in 11">{{ n }}</li>
+                </ul>
+              </div>
+              <div class="skills">
+                <ul>
+                  <li v-for="skill in skills | orderBy 'rating' 'name' -1" class="skill-rating rating-{{ skill.rating }}">
+                    <span class="skill-name">{{ skill.name }}</span>
+                    <span class="skill-rating-number">{{ skill.rating }}</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -32,6 +48,68 @@ import Timeline from '../components/Timeline.vue';
 export default {
   data () {
     return {
+      skills: [
+        {
+          name: 'Javascript',
+          rating: 9
+        },
+        {
+          name: 'PHP',
+          rating: 9
+        },
+        {
+          name: 'NodeJS',
+          rating: 8
+        },
+        {
+          name: 'Python',
+          rating: 5
+        },
+        {
+          name: 'Ruby',
+          rating: 4
+        },
+        {
+          name: 'CSS',
+          rating: 10
+        },
+        {
+          name: 'HTML',
+          rating: 10
+        },
+        {
+          name: 'Laravel',
+          rating: 8
+        },
+        {
+          name: 'Wordpress',
+          rating: 8
+        },
+        {
+          name: 'Jekyll',
+          rating: 7
+        },
+        {
+          name: 'AngularJS',
+          rating: 8
+        },
+        {
+          name: 'VueJS',
+          rating: 7
+        },
+        {
+          name: 'Apache',
+          rating: 7
+        },
+        {
+          name: 'Nginx',
+          rating: 6
+        },
+        {
+          name: 'Gulp / Grunt',
+          rating: 8
+        }
+      ],
       education_timeline: [
         {
           title: 'I was born in Indianapolis',

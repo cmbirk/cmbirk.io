@@ -16,6 +16,107 @@
       @extend .col-xs-12;
     }
 
+    .resume-skills {
+      @extend .col-md-6;
+
+      .skills {
+        ul {
+          list-style: none;
+          padding-left: 10px;
+
+          .skill-rating {
+            background: $transparent-blue;
+            padding-left: 10px;
+            border-radius: 2px;
+            margin-bottom:5px;
+            position:relative;
+
+            .skill-name {
+
+            }
+
+            .skill-rating-number {
+              position:absolute;
+              right: 5px;
+              color: $gray;
+            }
+
+            &.rating-10 {
+              width: 420px;
+            }
+
+            &.rating-9 {
+              width:380px;
+            }
+
+            &.rating-8 {
+              width: 340px;
+            }
+
+            &.rating-7 {
+              width: 300px;
+            }
+
+            &.rating-6 {
+              width: 260px;
+            }
+
+            &.rating-5 {
+              width: 220px;
+            }
+
+            &.rating-4 {
+              width: 180px;
+            }
+
+            &.rating-3 {
+              width: 140px;
+            }
+
+            &.rating-2 {
+              width: 100px;
+            }
+
+            &.rating-1 {
+              width: 60px;
+            }
+          }
+        }
+      }
+
+      .level-measurements {
+        list-style: none;
+        padding-left:0;
+
+        li {
+          display:inline-block;
+          margin: 0 10px;
+          position:relative;
+          background:$transparent-blue;
+          border-radius:5px;
+          width:20px;
+          text-align:center;
+
+          &:after {
+            content: ' ';
+            background: $transparent-blue;
+            position:absolute;
+            width:20px;
+            height:5px;
+            left:20px;
+            display:block;
+            top:7px;
+          }
+
+          &:last-child {
+            &:after {
+              display:none;
+            }
+          }
+        }
+      }
+    }
+
     .resume-timeline-education, .resume-timeline-experience {
       @extend .row;
     }
