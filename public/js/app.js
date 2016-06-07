@@ -14739,6 +14739,72 @@ setTimeout(function () {
 module.exports = Vue;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"_process":1}],30:[function(require,module,exports){
+module.exports={
+  "skills": [
+    {
+      "name": "Javascript",
+      "rating": 9
+    },
+    {
+      "name": "PHP",
+      "rating": 9
+    },
+    {
+      "name": "NodeJS",
+      "rating": 8
+    },
+    {
+      "name": "Python",
+      "rating": 5
+    },
+    {
+      "name": "Ruby",
+      "rating": 4
+    },
+    {
+      "name": "CSS",
+      "rating": 10
+    },
+    {
+      "name": "HTML",
+      "rating": 10
+    },
+    {
+      "name": "Laravel",
+      "rating": 8
+    },
+    {
+      "name": "Wordpress",
+      "rating": 8
+    },
+    {
+      "name": "Jekyll",
+      "rating": 7
+    },
+    {
+      "name": "AngularJS",
+      "rating": 8
+    },
+    {
+      "name": "VueJS",
+      "rating": 7
+    },
+    {
+      "name": "Apache",
+      "rating": 7
+    },
+    {
+      "name": "Nginx",
+      "rating": 6
+    },
+    {
+      "name": "Gulp / Grunt",
+      "rating": 8
+    }
+  ]
+}
+
+},{}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14815,7 +14881,7 @@ router.redirect({
 
 router.start(_App2.default, '#app');
 
-},{"./components/App.vue":31,"./views/HomeView.vue":35,"./views/ResumeView.vue":36,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],31:[function(require,module,exports){
+},{"./components/App.vue":32,"./views/HomeView.vue":36,"./views/ResumeView.vue":37,"vue":29,"vue-async-data":2,"vue-resource":17,"vue-router":28}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14850,7 +14916,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../app":30,"./NavMenu.vue":32,"vue":29,"vue-hot-reload-api":3}],32:[function(require,module,exports){
+},{"../app":31,"./NavMenu.vue":33,"vue":29,"vue-hot-reload-api":3}],33:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14883,7 +14949,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":3}],33:[function(require,module,exports){
+},{"vue":29,"vue-hot-reload-api":3}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14913,7 +14979,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"./TimelineEvent.vue":34,"vue":29,"vue-hot-reload-api":3}],34:[function(require,module,exports){
+},{"./TimelineEvent.vue":35,"vue":29,"vue-hot-reload-api":3}],35:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14943,7 +15009,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":3}],35:[function(require,module,exports){
+},{"vue":29,"vue-hot-reload-api":3}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14984,7 +15050,7 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":3}],36:[function(require,module,exports){
+},{"vue":29,"vue-hot-reload-api":3}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14995,57 +15061,16 @@ var _Timeline = require('../components/Timeline.vue');
 
 var _Timeline2 = _interopRequireDefault(_Timeline);
 
+var _resumeData = require('../../data/resumeData.json');
+
+var _resumeData2 = _interopRequireDefault(_resumeData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   data: function data() {
     return {
-      skills: [{
-        name: 'Javascript',
-        rating: 9
-      }, {
-        name: 'PHP',
-        rating: 9
-      }, {
-        name: 'NodeJS',
-        rating: 8
-      }, {
-        name: 'Python',
-        rating: 5
-      }, {
-        name: 'Ruby',
-        rating: 4
-      }, {
-        name: 'CSS',
-        rating: 10
-      }, {
-        name: 'HTML',
-        rating: 10
-      }, {
-        name: 'Laravel',
-        rating: 8
-      }, {
-        name: 'Wordpress',
-        rating: 8
-      }, {
-        name: 'Jekyll',
-        rating: 7
-      }, {
-        name: 'AngularJS',
-        rating: 8
-      }, {
-        name: 'VueJS',
-        rating: 7
-      }, {
-        name: 'Apache',
-        rating: 7
-      }, {
-        name: 'Nginx',
-        rating: 6
-      }, {
-        name: 'Gulp / Grunt',
-        rating: 8
-      }],
+      skills: _resumeData2.default.skills,
       education_timeline: [{
         title: 'I was born in Indianapolis',
         description: 'My birthday is December 30, 1987',
@@ -15102,6 +15127,6 @@ if (module.hot) {(function () {  module.hot.accept()
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../components/Timeline.vue":33,"vue":29,"vue-hot-reload-api":3}]},{},[30]);
+},{"../../data/resumeData.json":30,"../components/Timeline.vue":34,"vue":29,"vue-hot-reload-api":3}]},{},[31]);
 
 //# sourceMappingURL=app.js.map

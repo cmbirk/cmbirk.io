@@ -44,72 +44,12 @@
 </template>
 <script>
 import Timeline from '../components/Timeline.vue';
+import resumeData from '../../data/resumeData.json';
 
 export default {
   data () {
     return {
-      skills: [
-        {
-          name: 'Javascript',
-          rating: 9
-        },
-        {
-          name: 'PHP',
-          rating: 9
-        },
-        {
-          name: 'NodeJS',
-          rating: 8
-        },
-        {
-          name: 'Python',
-          rating: 5
-        },
-        {
-          name: 'Ruby',
-          rating: 4
-        },
-        {
-          name: 'CSS',
-          rating: 10
-        },
-        {
-          name: 'HTML',
-          rating: 10
-        },
-        {
-          name: 'Laravel',
-          rating: 8
-        },
-        {
-          name: 'Wordpress',
-          rating: 8
-        },
-        {
-          name: 'Jekyll',
-          rating: 7
-        },
-        {
-          name: 'AngularJS',
-          rating: 8
-        },
-        {
-          name: 'VueJS',
-          rating: 7
-        },
-        {
-          name: 'Apache',
-          rating: 7
-        },
-        {
-          name: 'Nginx',
-          rating: 6
-        },
-        {
-          name: 'Gulp / Grunt',
-          rating: 8
-        }
-      ],
+      skills: resumeData.skills,
       education_timeline: [
         {
           title: 'I was born in Indianapolis',
