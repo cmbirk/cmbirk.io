@@ -7999,7 +7999,7 @@ nav.active ul {
       height: 0;
       width: 0;
       border: solid transparent;
-      border-right-color: #A2BDD9;
+      border-right-color: rgba(162, 189, 217, 0.8);
       border-width: 8px; }
 
 .home-view {
