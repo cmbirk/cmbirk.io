@@ -15,6 +15,9 @@
         <a href="https://www.github.com/cmbirk" target="_blank">
           <i class="fa fa-github"></i>
         </a>
+        <a href="mailto:cmbirk@gmail.com" target="_blank">
+          <i class="fa fa-envelope"></i>
+        </a>
       </div>
     </div>
   </div>
