@@ -5,9 +5,9 @@
       <li>
         <a v-link="'/'">Home</a>
       </li>
-      <li>
+      <!-- <li>
         <a v-link="'/about'">About</a>
-      </li>
+      </li> -->
       <li>
         <a v-link="'/resume'">Resumé</a>
       </li>

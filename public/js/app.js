@@ -14937,7 +14937,7 @@ exports.default = {
   replace: false
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<nav v-bind:class=\"{'active': navToggle}\" v-on:click=\"toggleNav\">\n  <i class=\"fa fa-bars\"></i>\n  <ul>\n    <li>\n      <a v-link=\"'/'\">Home</a>\n    </li>\n    <li>\n      <a v-link=\"'/about'\">About</a>\n    </li>\n    <li>\n      <a v-link=\"'/resume'\">Resumé</a>\n    </li>\n  </ul>\n</nav>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<nav v-bind:class=\"{'active': navToggle}\" v-on:click=\"toggleNav\">\n  <i class=\"fa fa-bars\"></i>\n  <ul>\n    <li>\n      <a v-link=\"'/'\">Home</a>\n    </li>\n    <!-- <li>\n      <a v-link=\"'/about'\">About</a>\n    </li> -->\n    <li>\n      <a v-link=\"'/resume'\">Resumé</a>\n    </li>\n  </ul>\n</nav>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
