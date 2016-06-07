@@ -12,6 +12,7 @@
     "laravel-elixir": "^5.0.0",
     "laravel-elixir-imagemin": "0.2.3",
     "laravel-elixir-vueify": "1.0.3",
+    "pdfkit": "0.7.2",
     "vue": "1.0.24",
     "vue-async-data": "1.0.2",
     "vue-resource": "0.7.0",
