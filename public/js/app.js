@@ -14740,68 +14740,96 @@ module.exports = Vue;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"_process":1}],30:[function(require,module,exports){
 module.exports={
-  "skills": [
-    {
-      "name": "Javascript",
-      "rating": 9
-    },
-    {
-      "name": "PHP",
-      "rating": 9
-    },
-    {
-      "name": "NodeJS",
-      "rating": 8
-    },
-    {
-      "name": "Python",
-      "rating": 5
-    },
-    {
-      "name": "Ruby",
-      "rating": 4
-    },
-    {
-      "name": "CSS",
-      "rating": 10
-    },
-    {
-      "name": "HTML",
-      "rating": 10
-    },
-    {
-      "name": "Laravel",
-      "rating": 8
-    },
-    {
-      "name": "Wordpress",
-      "rating": 8
-    },
-    {
-      "name": "Jekyll",
-      "rating": 7
-    },
-    {
-      "name": "AngularJS",
-      "rating": 8
-    },
-    {
-      "name": "VueJS",
-      "rating": 7
-    },
-    {
-      "name": "Apache",
-      "rating": 7
-    },
-    {
-      "name": "Nginx",
-      "rating": 6
-    },
-    {
-      "name": "Gulp / Grunt",
-      "rating": 8
-    }
-  ]
+  "skills": {
+    "language": [
+      {
+        "name": "Javascript",
+        "rating": 9,
+      },
+      {
+        "name": "PHP",
+        "rating": 9,
+      },
+      {
+        "name": "Python",
+        "rating": 5,
+        "type": "language"
+      },
+      {
+        "name": "Ruby",
+        "rating": 4,
+        "type": "language"
+      },
+      {
+        "name": "CSS",
+        "rating": 10,
+        "type": "language"
+      },
+      {
+        "name": "HTML",
+        "rating": 10,
+        "type": "language"
+      }
+    ],
+    "framework": [
+      {
+        "name": "NodeJS",
+        "rating": 8,
+      },
+      {
+        "name": "Laravel",
+        "rating": 8,
+      },
+      {
+        "name": "Wordpress",
+        "rating": 8
+      },
+      {
+        "name": "Jekyll",
+        "rating": 7
+      },
+      {
+        "name": "AngularJS",
+        "rating": 8
+      },
+      {
+        "name": "VueJS",
+        "rating": 7
+      },
+    ],
+    "devops": [
+      {
+        "name": "Apache",
+        "rating": 7
+      },
+      {
+        "name": "Nginx",
+        "rating": 6
+      },
+      {
+        "name": "Ansible",
+        "rating": 6
+      },
+      {
+        "name": "Docker",
+        "rating": 7
+      }
+    ],
+    "tooling": [
+      {
+        "name": "Gulp / Grunt",
+        "rating": 8
+      },
+      {
+        "name": "SASS",
+        "rating": 9
+      },
+      {
+        "name": "Babel / ES2015",
+        "rating": 7
+      }
+    ]
+  }
 }
 
 },{}],31:[function(require,module,exports){
@@ -15115,7 +15143,7 @@ exports.default = {
   components: { Timeline: _Timeline2.default }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-body\">\n          <div class=\"resume-timeline\">\n            <div class=\"resume-timeline-experience\">\n              <h3 class=\"bold\">Experience</h3>\n              <timeline :timeline=\"experience_timeline\"></timeline>\n            </div>\n            <div class=\"resume-timeline-education\">\n              <h3 class=\"bold\">Education</h3>\n              <timeline :timeline=\"education_timeline\"></timeline>\n            </div>\n          </div>\n          <div class=\"resume-skills\">\n            <h3 class=\"bold\">Skills</h3>\n            <div class=\"skill-levels\">\n              <ul class=\"level-measurements\">\n                <li v-for=\"n in 11\">{{ n }}</li>\n              </ul>\n            </div>\n            <div class=\"skills\">\n              <ul>\n                <li v-for=\"skill in skills | orderBy 'rating' 'name' -1\" class=\"skill-rating rating-{{ skill.rating }}\">\n                  <span class=\"skill-name\">{{ skill.name }}</span>\n                  <span class=\"skill-rating-number\">{{ skill.rating }}</span>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"resume-view\">\n  <div class=\"view-header\">\n    <h1>Chris Birk's Resumé</h1>\n  </div>\n  <div class=\"view-content\">\n    <div class=\"white-bg\">\n      <div class=\"resume\">\n        <div class=\"resume-intro\">\n          <p>I am a full stack developer.  I use technology to solve real world problems helping real people.</p>\n        </div>\n        <div class=\"resume-body\">\n          <div class=\"resume-timeline\">\n            <div class=\"resume-timeline-experience\">\n              <h3 class=\"bold\">Experience</h3>\n              <timeline :timeline=\"experience_timeline\"></timeline>\n            </div>\n            <div class=\"resume-timeline-education\">\n              <h3 class=\"bold\">Education</h3>\n              <timeline :timeline=\"education_timeline\"></timeline>\n            </div>\n          </div>\n          <div class=\"resume-contact\">\n            <h3 class=\"bold\">Contact</h3>\n            <ul>\n              <li>\n                <i class=\"fa fa-envelope\"></i>\n                <a href=\"mailto:cmbirk@gmail.com\" target=\"_blank\">cmbirk@gmail.com</a>\n              </li>\n              <li>\n                <i class=\"fa fa-twitter\"></i>\n                <a href=\"https://twitter.com/cmbirk\" target=\"_blank\">@cmbirk</a>\n              </li>\n              <li>\n                <i class=\"fa fa-linkedin\"></i>\n                <a href=\"https://linkedin.com/in/cmbirk\" target=\"_blank\">LinkedIn/cmbirk</a>\n              </li>\n            </ul>\n          </div>\n          <div class=\"resume-work\">\n            <h3 class=\"bold\">Work</h3>\n            <i class=\"fa fa-github\"></i>\n            <a href=\"https://github.com/cmbirk\" target=\"_blank\">cmbirk</a>\n          </div>\n          <div class=\"resume-skills\">\n            <h3 class=\"bold\">Skills</h3>\n            <div class=\"skill-levels\">\n              <ul class=\"level-measurements\">\n                <li v-for=\"n in 11\">{{ n }}</li>\n              </ul>\n            </div>\n            <div class=\"skills\">\n              <ul>\n                <h4>Languages</h4>\n                <li v-for=\"skill in skills.language | orderBy 'rating' 'name' -1\" class=\"skill-rating rating-{{ skill.rating }}\">\n                  <span class=\"skill-name\">{{ skill.name }}</span>\n                  <span class=\"skill-rating-number\">{{ skill.rating }}</span>\n                </li>\n                <h4>Frameworks</h4>\n                <li v-for=\"skill in skills.framework | orderBy 'rating' 'name' -1\" class=\"skill-rating rating-{{ skill.rating }}\">\n                  <span class=\"skill-name\">{{ skill.name }}</span>\n                  <span class=\"skill-rating-number\">{{ skill.rating }}</span>\n                </li>\n                <h4>DevOps</h4>\n                <li v-for=\"skill in skills.devops | orderBy 'rating' 'name' -1\" class=\"skill-rating rating-{{ skill.rating }}\">\n                  <span class=\"skill-name\">{{ skill.name }}</span>\n                  <span class=\"skill-rating-number\">{{ skill.rating }}</span>\n                </li>\n                <h4>Tooling</h4>\n                <li v-for=\"skill in skills.tooling | orderBy 'rating' 'name' -1\" class=\"skill-rating rating-{{ skill.rating }}\">\n                  <span class=\"skill-name\">{{ skill.name }}</span>\n                  <span class=\"skill-rating-number\">{{ skill.rating }}</span>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

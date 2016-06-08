@@ -1,64 +1,92 @@
 {
-  "skills": [
-    {
-      "name": "Javascript",
-      "rating": 9
-    },
-    {
-      "name": "PHP",
-      "rating": 9
-    },
-    {
-      "name": "NodeJS",
-      "rating": 8
-    },
-    {
-      "name": "Python",
-      "rating": 5
-    },
-    {
-      "name": "Ruby",
-      "rating": 4
-    },
-    {
-      "name": "CSS",
-      "rating": 10
-    },
-    {
-      "name": "HTML",
-      "rating": 10
-    },
-    {
-      "name": "Laravel",
-      "rating": 8
-    },
-    {
-      "name": "Wordpress",
-      "rating": 8
-    },
-    {
-      "name": "Jekyll",
-      "rating": 7
-    },
-    {
-      "name": "AngularJS",
-      "rating": 8
-    },
-    {
-      "name": "VueJS",
-      "rating": 7
-    },
-    {
-      "name": "Apache",
-      "rating": 7
-    },
-    {
-      "name": "Nginx",
-      "rating": 6
-    },
-    {
-      "name": "Gulp / Grunt",
-      "rating": 8
-    }
-  ]
+  "skills": {
+    "language": [
+      {
+        "name": "Javascript",
+        "rating": 9,
+      },
+      {
+        "name": "PHP",
+        "rating": 9,
+      },
+      {
+        "name": "Python",
+        "rating": 5,
+        "type": "language"
+      },
+      {
+        "name": "Ruby",
+        "rating": 4,
+        "type": "language"
+      },
+      {
+        "name": "CSS",
+        "rating": 10,
+        "type": "language"
+      },
+      {
+        "name": "HTML",
+        "rating": 10,
+        "type": "language"
+      }
+    ],
+    "framework": [
+      {
+        "name": "NodeJS",
+        "rating": 8,
+      },
+      {
+        "name": "Laravel",
+        "rating": 8,
+      },
+      {
+        "name": "Wordpress",
+        "rating": 8
+      },
+      {
+        "name": "Jekyll",
+        "rating": 7
+      },
+      {
+        "name": "AngularJS",
+        "rating": 8
+      },
+      {
+        "name": "VueJS",
+        "rating": 7
+      },
+    ],
+    "devops": [
+      {
+        "name": "Apache",
+        "rating": 7
+      },
+      {
+        "name": "Nginx",
+        "rating": 6
+      },
+      {
+        "name": "Ansible",
+        "rating": 6
+      },
+      {
+        "name": "Docker",
+        "rating": 7
+      }
+    ],
+    "tooling": [
+      {
+        "name": "Gulp / Grunt",
+        "rating": 8
+      },
+      {
+        "name": "SASS",
+        "rating": 9
+      },
+      {
+        "name": "Babel / ES2015",
+        "rating": 7
+      }
+    ]
+  }
 }

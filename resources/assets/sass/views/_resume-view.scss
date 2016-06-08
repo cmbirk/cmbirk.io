@@ -16,6 +16,48 @@
       @extend .col-xs-12;
     }
 
+    .resume-contact {
+      @extend .col-md-6;
+
+      ul {
+        list-style: none;
+        padding-left: 5px;
+
+        li {
+          i {
+            padding:10px;
+            border: 1px solid $gray;
+            border-left: none;
+            opacity: .4;
+            width: 35px;
+            border-bottom: none;
+          }
+
+          &:first-child {
+            i {
+              border-top: none;
+            }
+          }
+        }
+      }
+    }
+
+    .resume-work {
+      @extend .col-md-6;
+
+      i {
+        margin-left:5px;
+        padding: 10px;
+        border: 1px solid $gray;
+        border-left: none;
+        opacity: .4;
+        width: 35px;
+        margin-right: 10px;
+        border-top: none;
+        border-bottom: none;
+      }
+    }
+
     .resume-skills {
       @extend .col-md-6;
 
