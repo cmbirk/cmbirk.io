@@ -25,7 +25,7 @@
               <ul>
                 <li>
                   <i class="fa fa-envelope"></i>
-                  <a href="mailto:cmbirk@gmail.com" target="_blank">cmbirk@gmail.com</a>
+                  <a href="mailto:cmbirk@cmbirk.io" target="_blank">cmbirk@cmbirk.io</a>
                 </li>
                 <li>
                   <i class="fa fa-twitter"></i>
