@@ -31,12 +31,12 @@
           'software developer',
           'entrepreneur',
           'guitarist',
-          'weight lifter',
           'basketball player',
+          'volleyball player',
           'golfer',
           'craft beer drinker',
           'whiskey connoisseur',
-          'volleyball player'
+          'weight lifter'
         ],
         currentRole: 0
       }
