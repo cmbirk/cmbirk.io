@@ -19,6 +19,7 @@
           <i class="fa fa-envelope"></i>
         </a>
       </div>
+      <small class="home-inquiries">Looking for web development help?  <a href="mailto:cmbirk@cmbirk.io" target="_blank">Shoot me an email </a> or check out <a href="/resume">my resume page.</a></small>
     </div>
   </div>
 </template>

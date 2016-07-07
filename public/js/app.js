@@ -15047,7 +15047,7 @@ exports.default = {
   data: function data() {
     return {
       displayRole: '',
-      roles: ['software developer', 'entrepreneur', 'guitarist', 'weight lifter', 'basketball player', 'golfer', 'craft beer drinker', 'whiskey connoisseur', 'volleyball player'],
+      roles: ['software developer', 'entrepreneur', 'guitarist', 'basketball player', 'volleyball player', 'golfer', 'craft beer drinker', 'whiskey connoisseur', 'weight lifter'],
       currentRole: 0
     };
   },
@@ -15066,7 +15066,7 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view\">\n  <header class=\"home-header view-header\">\n    <h1>Hi, I'm Chris</h1>\n  </header>\n  <div class=\"home-content view-content\">\n    <p>My name is Chris Birk and I am a <span class=\"current-role\">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>\n    <div class=\"social-icons\">\n      <a href=\"https://twitter.com/cmbirk\" target=\"_blank\">\n        <i class=\"fa fa-twitter\"></i>\n      </a>\n      <a href=\"https://www.linkedin.com/in/cmbirk\" target=\"_blank\">\n        <i class=\"fa fa-linkedin\"></i>\n      </a>\n      <a href=\"https://www.github.com/cmbirk\" target=\"_blank\">\n        <i class=\"fa fa-github\"></i>\n      </a>\n      <a href=\"mailto:cmbirk@cmbirk.io\" target=\"_blank\">\n        <i class=\"fa fa-envelope\"></i>\n      </a>\n    </div>\n  </div>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"home-view\">\n  <header class=\"home-header view-header\">\n    <h1>Hi, I'm Chris</h1>\n  </header>\n  <div class=\"home-content view-content\">\n    <p>My name is Chris Birk and I am a <span class=\"current-role\">{{ roles[currentRole] }}</span> living in Chicago, IL.</p>\n    <div class=\"social-icons\">\n      <a href=\"https://twitter.com/cmbirk\" target=\"_blank\">\n        <i class=\"fa fa-twitter\"></i>\n      </a>\n      <a href=\"https://www.linkedin.com/in/cmbirk\" target=\"_blank\">\n        <i class=\"fa fa-linkedin\"></i>\n      </a>\n      <a href=\"https://www.github.com/cmbirk\" target=\"_blank\">\n        <i class=\"fa fa-github\"></i>\n      </a>\n      <a href=\"mailto:cmbirk@cmbirk.io\" target=\"_blank\">\n        <i class=\"fa fa-envelope\"></i>\n      </a>\n    </div>\n    <small class=\"home-inquiries\">Looking for web development help?  <a href=\"mailto:cmbirk@cmbirk.io\" target=\"_blank\">Shoot me an email </a> or check out <a href=\"/resume\">my resume page.</a></small>\n  </div>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
