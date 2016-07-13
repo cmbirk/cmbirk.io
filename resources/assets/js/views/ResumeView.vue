@@ -9,6 +9,9 @@
           <div class="resume-intro">
             <p>I am a full stack developer.  I use technology to solve real world problems helping real people.</p>
           </div>
+          <div class="resume-download">
+            <button class="btn btn-primary" v-on:click="downloadResume">Download Resumé</button>
+          </div>
           <div class="resume-body">
             <div class="resume-timeline">
               <div class="resume-timeline-experience">
@@ -83,8 +86,16 @@
 <script>
 import Timeline from '../components/Timeline.vue';
 import resumeData from '../../data/resumeData.json';
+import ResumeGenerator from '../services/ResumeGenerator';
 
 export default {
+  methods: {
+    downloadResume: function () {
+      var generator = new ResumeGenerator();
+      generator.loadResumeData(resumeData);
+      generator.createPDF();
+    }
+  },
   data () {
     return {
       skills: resumeData.skills,
