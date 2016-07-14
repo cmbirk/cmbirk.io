@@ -33732,6 +33732,55 @@ module.exports = Vue;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"_process":92}],138:[function(require,module,exports){
 module.exports={
+  "education": [
+    {
+      "title": "I was born in Indianapolis",
+      "description": "My birthday is December 30, 1987",
+      "date": [1987, 11, 30]
+    },
+    {
+      "title": "Graduated from Cathedral High School",
+      "description": "in Indianapolis, IN",
+      "date": [2006, 4]
+    },
+    {
+      "title": "Graduated from Purdue University",
+      "description": "with a BS in Computer Science",
+      "date": [2010, 11]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Developer at OneAmerica",
+      "description": "Developed internal systems and tools for OneAmerica, a mutual insurance holding company",
+      "date": [2011, 0]
+    },
+    {
+      "title": "CTO / Lead Developer at WiseCampus.com",
+      "description": "Developed system for students to share class notes and get rewarded with gift cards",
+      "date": [2011, 3]
+    },
+    {
+      "title": "Director of DC Operations at inSourceCode LLC",
+      "description": "Managed all DC-area clients and development for inSourceCode.  This included custom applications in PHP and Javascript as well as extensive Wordpress development",
+      "date": [2011, 11]
+    },
+    {
+      "title": "Lead Developer at OpenGov Foundation",
+      "description": "As first employee and lead developer, created and managed many OSS projects in various languages and technologies.  Some, but not all, include custom PHP, Laravel, AngularJS, NodeJS, Wordpress, Jekyll, and Python",
+      "date": [2013, 0]
+    },
+    {
+      "title": "Member Board of Directors at OpenGov Foundation",
+      "description": "Served as one of the original members of the Board of Directors for the OpenGov Foundation",
+      "date": [2013, 0]
+    },
+    {
+      "title": "Owner / CEO at Divide By Zero LLC",
+      "description": "Started LLC to help support a growing civic technology community",
+      "date": [2016, 2]
+    }
+  ],
   "skills": {
     "language": [
       {
@@ -33766,7 +33815,7 @@ module.exports={
     "framework": [
       {
         "name": "NodeJS",
-        "rating": 8,
+        "rating": 9,
       },
       {
         "name": "Laravel",
@@ -33786,7 +33835,7 @@ module.exports={
       },
       {
         "name": "VueJS",
-        "rating": 7
+        "rating": 8
       },
     ],
     "devops": [
@@ -34092,7 +34141,13 @@ var ResumeGenerator = function () {
     value: function addDocContent(doc) {
       doc.fontSize(24).text("Chris Birk's Resume");
 
-      doc.fontSize(12).link('https://cmbirk.io/resume').text("Generated from cmbirk.io/resume", {
+      doc.fontSize(12).link('https://cmbirk.io/resume').text("Generated from https://cmbirk.io/resume", {
+        underline: true
+      });
+
+      doc.moveDown(2);
+
+      doc.fontSize(18).text("Experience", {
         underline: true
       });
     }
@@ -34187,47 +34242,27 @@ exports.default = {
       generator.createPDF();
     }
   },
+  computed: {
+    education_timeline: function education_timeline() {
+      var timeline = _resumeData2.default.education;
+      timeline.forEach(function (item) {
+        item.date = new Date(item.date[0], item.date[1]);
+      });
+
+      return timeline;
+    },
+    experience_timeline: function experience_timeline() {
+      var timeline = _resumeData2.default.experience;
+      timeline.forEach(function (item) {
+        item.date = new Date(item.date[0], item.date[1]);
+      });
+
+      return timeline;
+    }
+  },
   data: function data() {
     return {
-      skills: _resumeData2.default.skills,
-      education_timeline: [{
-        title: 'I was born in Indianapolis',
-        description: 'My birthday is December 30, 1987',
-        date: new Date(1987, 11, 30)
-      }, {
-        title: 'Graduated from Cathedral High School',
-        description: 'in Indianapolis, IN',
-        date: new Date(2006, 4)
-      }, {
-        title: 'Graduated from Purdue University',
-        description: 'with a BS in Computer Science',
-        date: new Date(2010, 11)
-      }],
-      experience_timeline: [{
-        title: 'Developer at OneAmerica',
-        description: "Developed internal systems and tools for OneAmerica, a mutual insurance holding company",
-        date: new Date(2011, 0)
-      }, {
-        title: 'CTO / Lead Developer at WiseCampus.com',
-        description: "Developed system for students to share class notes and get rewarded with gift cards",
-        date: new Date(2011, 3)
-      }, {
-        title: 'Director of DC Operations at inSourceCode LLC',
-        description: "Managed all DC-area clients and development for inSourceCode.  This included custom applications in PHP and Javascript as well as extensive Wordpress development",
-        date: new Date(2011, 11)
-      }, {
-        title: 'Lead Developer at OpenGov Foundation',
-        description: "As first employee and lead developer, created and managed many OSS projects in various languages and technologies.  Some, but not all, include custom PHP, Laravel, AngularJS, NodeJS, Wordpress, Jekyll, and Python",
-        date: new Date(2013, 0)
-      }, {
-        title: 'Member Board of Directors at OpenGov Foundation',
-        description: "Served as one of the original members of the Board of Directors for the OpenGov Foundation",
-        date: new Date(2013, 0)
-      }, {
-        title: 'Owner / CEO at Divide By Zero LLC',
-        description: 'Started LLC to help support a growing civic technology community',
-        date: new Date(2016, 2)
-      }]
+      skills: _resumeData2.default.skills
     };
   },
 

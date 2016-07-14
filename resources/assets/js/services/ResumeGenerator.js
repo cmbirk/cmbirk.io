@@ -39,8 +39,15 @@ export default class ResumeGenerator {
 
     doc.fontSize(12)
       .link('https://cmbirk.io/resume')
-      .text("Generated from cmbirk.io/resume", {
+      .text("Generated from https://cmbirk.io/resume", {
         underline: true,
+      });
+
+    doc.moveDown(2);
+
+    doc.fontSize(18)
+      .text("Experience", {
+        underline: true
       });
   }
 
