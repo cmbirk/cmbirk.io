@@ -16,10 +16,10 @@ export default class ResumeGenerator {
 
     var stream = doc.pipe(blobStream('resume.pdf'));
 
-    var xhr = new XMLHttpRequest;
-
-    xhr.onload = function () {
-      doc.font(xhr.response);
+    var fontPromise = axios.get('/fonts/WireOne.ttf', {
+      responseType: 'arraybuffer'
+    }).then(function (res) {
+      doc.font(res.data);
 
       doc.fontSize(24)
         .text("Chris Birk's Resume");
@@ -37,11 +37,7 @@ export default class ResumeGenerator {
 
         this.savePDF(blob);
       }.bind(this));
-    }.bind(this);
-
-    xhr.responseType = 'arraybuffer';
-    xhr.open('GET', '/fonts/WireOne.ttf', true);
-    xhr.send();
+    }.bind(this));
   }
 
   savePDF(blob) {
