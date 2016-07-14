@@ -21,14 +21,7 @@ export default class ResumeGenerator {
     }).then(function (res) {
       doc.font(res.data);
 
-      doc.fontSize(24)
-        .text("Chris Birk's Resume");
-
-      doc.fontSize(12)
-        .link('https://cmbirk.io/resume')
-        .text("Generated from cmbirk.io/resume", {
-          underline: true,
-        });
+      this.addDocContent(doc);
 
       doc.end();
 
@@ -38,6 +31,17 @@ export default class ResumeGenerator {
         this.savePDF(blob);
       }.bind(this));
     }.bind(this));
+  }
+
+  addDocContent(doc) {
+    doc.fontSize(24)
+      .text("Chris Birk's Resume");
+
+    doc.fontSize(12)
+      .link('https://cmbirk.io/resume')
+      .text("Generated from cmbirk.io/resume", {
+        underline: true,
+      });
   }
 
   savePDF(blob) {
