@@ -46,9 +46,39 @@ export default class ResumeGenerator {
     doc.moveDown(2);
 
     doc.fontSize(18)
-      .text("Experience", {
+      .text("Experience:", {
         underline: true
       });
+
+    doc.moveDown();
+
+    this.resumeData.experience.reverse().forEach(function (item) {
+      doc.fontSize(14)
+        .text(item.title, {
+          underline: true
+        });
+
+      doc.fontSize(12)
+        .text(item.description);
+
+      doc.moveDown();
+    });
+
+    doc.moveDown();
+
+    doc.fontSize(18)
+      .text("Education:", {
+        underline: true
+      });
+
+    doc.moveDown();
+
+    this.resumeData.education.reverse().forEach(function (item) {
+      doc.fontSize(12)
+        .text(item.title);
+
+      doc.moveDown();
+    });
   }
 
   savePDF(blob) {
