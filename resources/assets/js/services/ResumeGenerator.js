@@ -4,15 +4,25 @@ import axios from 'axios';
 
 const BLUE = '#041128';
 
+/**
+* ResumeGenerator Class
+*/
 export default class ResumeGenerator {
   constructor () {
 
   }
 
+  //Load in resume data
   loadResumeData (resumeData) {
     this.resumeData = resumeData;
   }
 
+  /**
+  * CreatePDF()
+  *
+  * Meant for use in-browser.  Creates resume from the data loaded in
+  *   loadResumeData() and forces a browser download of the resulting PDF.
+  */
   createPDF () {
     var doc = new PDFDocument;
 
@@ -35,6 +45,13 @@ export default class ResumeGenerator {
     }.bind(this));
   }
 
+  /**
+  * addDocContent(doc)
+  *
+  * Loads the PDFDocument object with the resume content and styles it
+  *
+  * @param (PDFDocument) doc
+  */
   addDocContent(doc) {
     doc.fontSize(24)
       .text("Chris Birk's Resume");
@@ -42,11 +59,16 @@ export default class ResumeGenerator {
     doc.fill('steelblue');
 
     doc.fontSize(12)
-      .link('https://cmbirk.io/resume')
-      .text("Generated from https://cmbirk.io/resume", {
+      .text("Built from https://cmbirk.io/resume", {
         underline: true,
-      })
-      .fill('black');
+        link: 'https://cmbirk.io/resume'
+      });
+
+    doc.text("Generator code on Github", {
+      underline: true,
+      link: 'https://github.com/cmbirk/cmbirk.io/blob/master/resources/assets/js/services/ResumeGenerator.js'
+    })
+    .fill('black');
 
     doc.moveDown();
 
@@ -96,6 +118,14 @@ export default class ResumeGenerator {
     });
   }
 
+  /**
+  * savePDF(blob)
+  *
+  * Appends a element to the document and simulates a click event to download
+  *   the generated PDF
+  *
+  * @param (Blob) blob
+  */
   savePDF(blob) {
     var a = document.createElement('a');
     document.body.appendChild(a);

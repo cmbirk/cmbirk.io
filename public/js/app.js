@@ -34106,16 +34106,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var BLUE = '#041128';
 
+/**
+* ResumeGenerator Class
+*/
+
 var ResumeGenerator = function () {
   function ResumeGenerator() {
     _classCallCheck(this, ResumeGenerator);
   }
+
+  //Load in resume data
+
 
   _createClass(ResumeGenerator, [{
     key: 'loadResumeData',
     value: function loadResumeData(resumeData) {
       this.resumeData = resumeData;
     }
+
+    /**
+    * CreatePDF()
+    *
+    * Meant for use in-browser.  Creates resume from the data loaded in
+    *   loadResumeData() and forces a browser download of the resulting PDF.
+    */
+
   }, {
     key: 'createPDF',
     value: function createPDF() {
@@ -34139,6 +34154,15 @@ var ResumeGenerator = function () {
         }.bind(this));
       }.bind(this));
     }
+
+    /**
+    * addDocContent(doc)
+    *
+    * Loads the PDFDocument object with the resume content and styles it
+    *
+    * @param (PDFDocument) doc
+    */
+
   }, {
     key: 'addDocContent',
     value: function addDocContent(doc) {
@@ -34146,8 +34170,14 @@ var ResumeGenerator = function () {
 
       doc.fill('steelblue');
 
-      doc.fontSize(12).link('https://cmbirk.io/resume').text("Generated from https://cmbirk.io/resume", {
-        underline: true
+      doc.fontSize(12).text("Built from https://cmbirk.io/resume", {
+        underline: true,
+        link: 'https://cmbirk.io/resume'
+      });
+
+      doc.text("Generator code on Github", {
+        underline: true,
+        link: 'https://github.com/cmbirk/cmbirk.io/blob/master/resources/assets/js/services/ResumeGenerator.js'
       }).fill('black');
 
       doc.moveDown();
@@ -34188,6 +34218,16 @@ var ResumeGenerator = function () {
         doc.moveDown();
       });
     }
+
+    /**
+    * savePDF(blob)
+    *
+    * Appends a element to the document and simulates a click event to download
+    *   the generated PDF
+    *
+    * @param (Blob) blob
+    */
+
   }, {
     key: 'savePDF',
     value: function savePDF(blob) {
