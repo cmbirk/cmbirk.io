@@ -2,6 +2,8 @@ import PDFDocument from 'pdfkit';
 import blobStream from 'blob-stream';
 import axios from 'axios';
 
+const BLUE = '#041128';
+
 export default class ResumeGenerator {
   constructor () {
 
@@ -37,11 +39,14 @@ export default class ResumeGenerator {
     doc.fontSize(24)
       .text("Chris Birk's Resume");
 
+    doc.fill('steelblue');
+
     doc.fontSize(12)
       .link('https://cmbirk.io/resume')
       .text("Generated from https://cmbirk.io/resume", {
         underline: true,
-      });
+      })
+      .fill('firebrick');
 
     doc.moveDown(2);
 
@@ -59,7 +64,9 @@ export default class ResumeGenerator {
         });
 
       doc.fontSize(12)
-        .text(item.description);
+        .fill('black')
+        .text(item.description)
+        .fill('firebrick');
 
       doc.moveDown();
     });
@@ -71,11 +78,15 @@ export default class ResumeGenerator {
         underline: true
       });
 
-    doc.moveDown();
-
     this.resumeData.education.reverse().forEach(function (item) {
+      console.log(item);
       doc.fontSize(12)
-        .text(item.title);
+        .fill('black')
+        .text(new Date(item.date).getFullYear() + ' - ' + item.title);
+
+      doc.text(item.description, {
+          indent: 4
+        });
 
       doc.moveDown();
     });

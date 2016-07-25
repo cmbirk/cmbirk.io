@@ -11,6 +11,8 @@
           </div>
           <div class="resume-download">
             <button class="btn btn-primary" v-on:click="downloadResume">Download Resumé</button>
+            <br>
+            <small class="code-example-helper"><a href="https://github.com/cmbirk/cmbirk.io/blob/master/resources/assets/js/services/ResumeGenerator.js" target="_blank">Generator on Github</a></small>
           </div>
           <div class="resume-body">
             <div class="resume-timeline">
