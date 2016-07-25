@@ -46,9 +46,14 @@ export default class ResumeGenerator {
       .text("Generated from https://cmbirk.io/resume", {
         underline: true,
       })
-      .fill('firebrick');
+      .fill('black');
 
-    doc.moveDown(2);
+    doc.moveDown();
+
+    doc.text(this.resumeData.introduction);
+
+    doc.moveDown()
+      .fill('firebrick');
 
     doc.fontSize(18)
       .text("Experience:", {
@@ -79,7 +84,6 @@ export default class ResumeGenerator {
       });
 
     this.resumeData.education.reverse().forEach(function (item) {
-      console.log(item);
       doc.fontSize(12)
         .fill('black')
         .text(new Date(item.date).getFullYear() + ' - ' + item.title);

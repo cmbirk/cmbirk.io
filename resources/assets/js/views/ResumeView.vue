@@ -1,16 +1,16 @@
 <template>
   <div class="resume-view">
     <div class="view-header">
-      <h1>Chris Birk's Resumé</h1>
+      <h1>Chris Birk's Résumé</h1>
     </div>
     <div class="view-content">
       <div class="white-bg">
         <div class="resume">
           <div class="resume-intro">
-            <p>I am a full stack developer.  I use technology to solve real world problems helping real people.</p>
+            <p>{{ resumeData.introduction }}</p>
           </div>
           <div class="resume-download">
-            <button class="btn btn-primary" v-on:click="downloadResume">Download Resumé</button>
+            <button class="btn btn-primary" v-on:click="downloadResume">Download Résumé</button>
             <br>
             <small class="code-example-helper"><a href="https://github.com/cmbirk/cmbirk.io/blob/master/resources/assets/js/services/ResumeGenerator.js" target="_blank">Generator on Github</a></small>
           </div>
@@ -118,6 +118,7 @@ export default {
   },
   data () {
     return {
+      resumeData: resumeData,
       skills: resumeData.skills,
     }
   },
