@@ -34138,7 +34138,7 @@ var ResumeGenerator = function () {
 
       var stream = doc.pipe((0, _blobStream2.default)('resume.pdf'));
 
-      var fontPromise = _axios2.default.get('/fonts/WireOne.ttf', {
+      var fontPromise = _axios2.default.get('/fonts/Quicksand-Regular.ttf', {
         responseType: 'arraybuffer'
       }).then(function (res) {
         doc.font(res.data);

@@ -28,7 +28,7 @@ export default class ResumeGenerator {
 
     var stream = doc.pipe(blobStream('resume.pdf'));
 
-    var fontPromise = axios.get('/fonts/WireOne.ttf', {
+    var fontPromise = axios.get('/fonts/Quicksand-Regular.ttf', {
       responseType: 'arraybuffer'
     }).then(function (res) {
       doc.font(res.data);
