@@ -10,7 +10,7 @@
             <p>{{ resumeData.introduction }}</p>
           </div>
           <div class="resume-download">
-            <button class="btn btn-primary" v-on:click="downloadResume">Download Résumé</button>
+            <a class="btn btn-primary" href="/pdf/Chris Birk Resume.pdf" download>Download Résumé</a>
             <br>
             <small class="code-example-helper"><a href="https://github.com/cmbirk/cmbirk.io/blob/master/resources/assets/js/services/ResumeGenerator.js" target="_blank">Generator on Github</a></small>
           </div>
