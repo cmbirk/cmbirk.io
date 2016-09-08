@@ -12,9 +12,8 @@
 */
 
 Route::any('{slug}', function ($slug) {
-  return view('welcome');
+    return view('welcome');
 })->where('slug', '^(?!(api)/)(.*)$');
 
 Route::group(['prefix' => 'api', 'middleware' => ['web']], function () {
-
 });
