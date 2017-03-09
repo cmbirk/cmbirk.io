@@ -47,6 +47,11 @@
       "title": "Owner / CEO at Divide By Zero LLC",
       "description": "Started LLC to help support a growing civic technology community",
       "date": [2016, 2]
+    },
+    {
+      "title": "Freelance Platform Developer at Gigster",
+      "description": "Freelance developer working on the internal Gigster Platform Engineering Team",
+      "date": [2016, 8]
     }
   ],
   "skills": {
@@ -54,6 +59,10 @@
       {
         "name": "Javascript",
         "rating": 9,
+      },
+      {
+        "name": "Babel / ES2015 / ES6",
+        "rating": 9
       },
       {
         "name": "PHP",
@@ -90,6 +99,10 @@
         "rating": 9,
       },
       {
+        "name": "Express",
+        "rating": 9
+      },
+      {
         "name": "Wordpress",
         "rating": 8
       },
@@ -105,15 +118,27 @@
         "name": "VueJS",
         "rating": 8
       },
+      {
+        "name": "React",
+        "rating": 7
+      }
     ],
     "devops": [
       {
         "name": "Apache",
-        "rating": 7
+        "rating": 8
       },
       {
         "name": "Nginx",
-        "rating": 6
+        "rating": 8
+      },
+      {
+        "name": "AWS",
+        "rating": 8
+      },
+      {
+        "name": "Heroku",
+        "rating": 8
       },
       {
         "name": "Ansible",
@@ -122,20 +147,24 @@
       {
         "name": "Docker",
         "rating": 7
-      }
+      },
     ],
     "tooling": [
       {
-        "name": "Gulp / Grunt",
-        "rating": 8
+        "name": "NPM",
+        "rating": 9
+      },
+      {
+        "name": "Babel / ES2015",
+        "rating": 9
       },
       {
         "name": "SASS",
         "rating": 9
       },
       {
-        "name": "Babel / ES2015",
-        "rating": 7
+        "name": "Gulp / Grunt",
+        "rating": 8
       }
     ]
   }
