@@ -1,6 +1,6 @@
 <template>
   <li class="timeline-event">
-    <div class="timeline-event-year">{{ date }}</div>
+    <div class="timeline-event-year">{{ fullDateYear }}</div>
     <div class="timeline-event-body">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
@@ -12,10 +12,11 @@
     props: {
       title: String,
       description: String,
-      date: {
-        coerce: (val) => {
-          return val.getFullYear();
-        }
+      date: Date
+    },
+    computed: {
+      fullDateYear: function () {
+        return this.date.getFullYear();
       }
     }
   }

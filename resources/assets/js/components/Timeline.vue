@@ -1,6 +1,6 @@
 <template>
   <ul class="timeline">
-    <timeline-event v-for="event in timeline | orderBy 'date' -1" :title="event.title" :description="event.description" :date="event.date"></timeline-event>
+    <timeline-event v-for="event in orderedEvents" :title="event.title" :description="event.description" :date="event.date"></timeline-event>
   </ul>
 </template>
 <script>
@@ -8,6 +8,11 @@
 
   export default {
     props: ['timeline'],
-    components: { TimelineEvent }
+    components: { TimelineEvent },
+    computed: {
+      orderedEvents: function () {
+        return _.orderBy(this.timeline, 'date', 'desc');
+      }
+    }
   }
 </script>

@@ -11,5 +11,9 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.copy(mix.config.assetsPath + '/fonts/*.ttf', mix.config.publicPath + '/fonts/')
+  .copy('node_modules/font-awesome/fonts/fontawesome-webfont.woff2', mix.config.publicPath + '/fonts/')
+  .copy('node_modules/font-awesome/fonts/fontawesome-webfont.woff', mix.config.publicPath + '/fonts/')
+  .copy('node_modules/font-awesome/fonts/fontawesome-webfont.ttf', mix.config.publicPath + '/fonts/')
+  .js('resources/assets/js/app.js', 'public/js')
+  .sass('resources/assets/sass/app.scss', 'public/css');

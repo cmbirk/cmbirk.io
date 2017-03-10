@@ -58,7 +58,7 @@
     "language": [
       {
         "name": "Javascript",
-        "rating": 9,
+        "rating": 9
       },
       {
         "name": "Babel / ES2015 / ES6",
@@ -66,7 +66,7 @@
       },
       {
         "name": "PHP",
-        "rating": 9,
+        "rating": 9
       },
       {
         "name": "Python",
@@ -92,11 +92,11 @@
     "framework": [
       {
         "name": "NodeJS",
-        "rating": 9,
+        "rating": 9
       },
       {
         "name": "Laravel",
-        "rating": 9,
+        "rating": 9
       },
       {
         "name": "Express",
@@ -147,7 +147,7 @@
       {
         "name": "Docker",
         "rating": 7
-      },
+      }
     ],
     "tooling": [
       {
@@ -169,3 +169,4 @@
     ]
   }
 }
+

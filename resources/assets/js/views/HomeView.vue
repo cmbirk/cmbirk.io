@@ -42,8 +42,10 @@
         currentRole: 0
       }
     },
-    ready () {
-      setInterval(this.changeRole, 4000);
+    mounted () {
+      this.$nextTick(function () {
+        setInterval(this.changeRole, 4000);
+      });
     },
     methods: {
       changeRole () {

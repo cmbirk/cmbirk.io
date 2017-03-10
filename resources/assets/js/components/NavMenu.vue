@@ -3,13 +3,10 @@
     <i class="fa fa-bars"></i>
     <ul>
       <li>
-        <a v-link="'/'">Home</a>
+        <router-link to="/">Home</router-link>
       </li>
-      <!-- <li>
-        <a v-link="'/about'">About</a>
-      </li> -->
       <li>
-        <a v-link="'/resume'">Resumé</a>
+        <router-link to="/resume">Resumé</router-link>
       </li>
     </ul>
   </nav>
@@ -25,7 +22,6 @@
       toggleNav () {
         this.navToggle = !this.navToggle;
       }
-    },
-    replace: false
+    }
   }
 </script>

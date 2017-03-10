@@ -1,7 +1,12 @@
 <template>
   <div class="container-fluid">
     <nav-menu></nav-menu>
-    <router-view transition="fade" transition-mode="out-in"></router-view>
+    <transition 
+      name="fade"
+      mode="out-in"
+    >
+      <router-view></router-view>  
+    </transition>
   </div>
 </template>
 

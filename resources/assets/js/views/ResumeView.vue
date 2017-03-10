@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="resume-view">
     <div class="view-header">
       <h1>Chris Birk's Résumé</h1>
@@ -8,11 +8,6 @@
         <div class="resume">
           <div class="resume-intro">
             <p>{{ resumeData.introduction }}</p>
-          </div>
-          <div class="resume-download">
-            <a class="btn btn-primary" href="/pdf/Chris Birk Resume.pdf" download>Download Résumé</a>
-            <br>
-            <small class="code-example-helper"><a href="https://github.com/cmbirk/cmbirk.io/blob/master/resources/assets/js/services/ResumeGenerator.js" target="_blank">Generator on Github</a></small>
           </div>
           <div class="resume-body">
             <div class="resume-timeline">
@@ -49,30 +44,30 @@
             </div>
             <div class="resume-skills">
               <h3 class="bold">Skills</h3>
-              <div class="skill-levels">
+              <!-- <div class="skill-levels">
                 <ul class="level-measurements">
-                  <li v-for="n in 11">{{ n }}</li>
+                  <li v-for="n in 10">{{ n }}</li>
                 </ul>
-              </div>
+              </div> -->
               <div class="skills">
                 <ul>
                   <h4>Languages</h4>
-                  <li v-for="skill in skills.language | orderBy 'rating' 'name' -1" class="skill-rating rating-{{ skill.rating }}">
+                  <li v-for="skill in orderedLanguageSkills" v-bind:class="'skill-rating rating-' + skill.rating">
                     <span class="skill-name">{{ skill.name }}</span>
                     <span class="skill-rating-number">{{ skill.rating }}</span>
                   </li>
                   <h4>Frameworks</h4>
-                  <li v-for="skill in skills.framework | orderBy 'rating' 'name' -1" class="skill-rating rating-{{ skill.rating }}">
+                  <li v-for="skill in orderedFrameworkSkills" v-bind:class="'skill-rating rating-' + skill.rating">
                     <span class="skill-name">{{ skill.name }}</span>
                     <span class="skill-rating-number">{{ skill.rating }}</span>
                   </li>
                   <h4>DevOps</h4>
-                  <li v-for="skill in skills.devops | orderBy 'rating' 'name' -1" class="skill-rating rating-{{ skill.rating }}">
+                  <li v-for="skill in orderedDevopsSkills" v-bind:class="'skill-rating rating-' + skill.rating">
                     <span class="skill-name">{{ skill.name }}</span>
                     <span class="skill-rating-number">{{ skill.rating }}</span>
                   </li>
                   <h4>Tooling</h4>
-                  <li v-for="skill in skills.tooling | orderBy 'rating' 'name' -1" class="skill-rating rating-{{ skill.rating }}">
+                  <li v-for="skill in orderedToolingSkills" v-bind:class="'skill-rating rating-' + skill.rating">
                     <span class="skill-name">{{ skill.name }}</span>
                     <span class="skill-rating-number">{{ skill.rating }}</span>
                   </li>
@@ -86,18 +81,12 @@
   </div>
 </template>
 <script>
+import _ from 'lodash';
+
 import Timeline from '../components/Timeline.vue';
 import resumeData from '../../data/resumeData.json';
-import ResumeGenerator from '../services/ResumeGenerator';
 
 export default {
-  methods: {
-    downloadResume: function () {
-      var generator = new ResumeGenerator();
-      generator.loadResumeData(resumeData);
-      generator.createPDF();
-    }
-  },
   computed: {
     education_timeline: function () {
       var timeline = resumeData.education;
@@ -114,6 +103,18 @@ export default {
       });
 
       return timeline;
+    },
+    orderedLanguageSkills: function () {
+      return _.orderBy(this.skills.language, ['rating', 'name'], ['desc', 'asc']);
+    },
+    orderedFrameworkSkills: function () {
+      return _.orderBy(this.skills.framework, ['rating', 'name'], ['desc', 'asc']);
+    },
+    orderedDevopsSkills: function () {
+      return _.orderBy(this.skills.devops, ['rating', 'name'], ['desc', 'asc']);
+    },
+    orderedToolingSkills: function () {
+      return _.orderBy(this.skills.tooling, ['rating', 'name'], ['desc', 'asc']);
     }
   },
   data () {
