@@ -1,0 +1,156 @@
+{
+  "main": {
+    "name":"Chris Birk",
+    "occupation":"Full Stack Developer, Entrepreneur, Problem Solver",
+    "description":"",
+    "image":"profilepic.jpg",
+    "bio":"Hi, my name is Chris. I'm a full-stack developer and entrepreneur that loves helping people through technology. I've worked in / helped build a number of startup organizations and am also an avid open source advocate and contributor. I believe that technology has an unmeasurable ability to touch peoples' lives for the better and work every day to strengthen that impact.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "cmbirk@cmbirk.io",
+    "phone": "555-555-5555",
+    "address":{
+      "street":"(Your Street)",
+      "city":"Chicago",
+      "state":"IL",
+      "zip": "(Your Zip/Postal Code)"
+    },
+    "website": "https://cmbirk.io",
+    "resumedownload":"https://cmbirk.io/docs/resume.pdf",
+    "social":[
+      {
+        "name":"twitter",
+        "url":"https://twitter.com/cmbirk",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/cmbirk",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/cmbirk",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"",
+    "education":[
+      {
+        "school":"Purdue University",
+        "degree":"Bachelor Computer Science, Minor in Management",
+        "graduated":"Dec 2010",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"Crossroads CX",
+        "title":"CEO, Co-Founder",
+        "years":"Apr 2018 - Present",
+        "description":"We're working on something new.  Details coming soon!"
+      },
+      {
+        "company":"Divide By Zero, LLC",
+        "title":"Owner",
+        "years":"Mar 2016 - Present",
+        "description":"Software and Business Consulting"
+      },
+      {
+        "company":"ArrowIQ",
+        "title":"CTO, Co-Founder",
+        "years":"Apr 2017 - Apr 2018",
+        "description":"Led all software development and technical partnerships"
+      },
+      {
+        "company":"OpenGov Foundation",
+        "title":"Lead Developer, Co-Founder, Board Member",
+        "years":"Jan 2013 - Feb 2016",
+        "description":"Led all software development and open source project management. Assisted Executive Director in outreach, user research, and events. Managed project stakeholders from multiple countries and various US governmental entities including the US Congress, White House, federal agencies, and multiple major US Cities. Architected public engagement platforms, legislative drafting and conversion tools, and internal tools & infrastructure."
+      },
+      {
+        "company":"inSourceCode, LLC",
+        "title":"Director of DC Operations",
+        "years":"Dec 2011 - Jan 2013",
+        "description":"Managed relationships and developed all software for Washington, DC and the East coast. Led business development and sales for the region."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Git",
+        "level":"60%"
+      },
+      {
+        "name":"Illustrator",
+        "level":"55%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"50%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"HTML5",
+        "level":"80%"
+      },
+      {
+        "name":"VueJs",
+        "level":"50%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"canadian-wanderlust.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      },
+      {
+        "title":"Fury Fighting Gear",
+        "category":"(offline now) A fighting gear company I started",
+        "image":"fury-fighting-gear.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"original-thai-food.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title":"Resume Website",
+        "category":"A React based resume website template",
+        "image":"resume-website.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Smirkspace",
+        "category":"(MVP Only) A React and Meteor based chat University project.",
+        "image":"smirkspace.jpg",
+        "url":"http://www.smirkspace.com"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user":"Kareem Abdul Jabbar"
+      },
+      {
+        "text":"That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user":"Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}
