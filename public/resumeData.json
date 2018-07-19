@@ -15,7 +15,7 @@
       "zip": "(Your Zip/Postal Code)"
     },
     "website": "https://cmbirk.io",
-    "resumedownload":"https://cmbirk.io/docs/resume.pdf",
+    "resumedownload":"https://s3.amazonaws.com/cmbirk/resume.pdf",
     "social":[
       {
         "name":"twitter",
